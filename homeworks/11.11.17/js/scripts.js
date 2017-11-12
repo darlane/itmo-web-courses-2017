@@ -82,7 +82,6 @@ var promptFunctions = {
 
         alert(numberOne === numberTwo
             || numberOne === numberThree
-            || numberTwo === numberOne
             || numberTwo === numberThree
         );
     }
@@ -91,43 +90,43 @@ var promptFunctions = {
 
 var atHtmlFunctions = {
     minimalShow: function () {
-        atHtmlFunctions.showNumberList();
-        atHtmlFunctions.setMethod('minimal')
+        this.showNumberList();
+        this.setMethod('minimal')
     },
 
     numDescriptionShow: function () {
-        atHtmlFunctions.showOneNumberField(-999, 999);
-        atHtmlFunctions.setMethod('num_description');
+        this.showOneNumberField(-999, 999);
+        this.setMethod('num_description');
     },
 
     digitDescriptionShow: function () {
-        atHtmlFunctions.showOneNumberField(0, 9);
-        atHtmlFunctions.setMethod('digit_description');
+        this.showOneNumberField(0, 9);
+        this.setMethod('digit_description');
     },
 
     markDescriptionShow: function () {
-        atHtmlFunctions.showOneNumberField(1, 5);
-        atHtmlFunctions.setMethod('mark_description');
+        this.showOneNumberField(1, 5);
+        this.setMethod('mark_description');
     },
 
 
     checkEqualShow: function () {
-        atHtmlFunctions.showNumberList();
-        atHtmlFunctions.setMethod('check_equal')
+        this.showNumberList();
+        this.setMethod('check_equal')
     },
 
 
     showNumberList: function () {
-        atHtmlFunctions.changeTitle(true);
-        atHtmlFunctions.showNHtmlViewBlock(180);
+        this.changeTitle(true);
+        this.showNHtmlViewBlock(180);
         $('.result-block').hide();
         $('.numbers-list').show();
         $('.one-number').hide();
     },
 
     showOneNumberField: function (min, max) {
-        atHtmlFunctions.changeTitle();
-        atHtmlFunctions.showNHtmlViewBlock(180);
+        this.changeTitle();
+        this.showNHtmlViewBlock(180);
         $('.result-block').hide();
         $('.numbers-list').hide();
         $('.one-number').show();
@@ -143,7 +142,7 @@ var atHtmlFunctions = {
 
     changeTitle: function (many) {
         $('form > h4').html('Введите ' + (many !== undefined ? 'числа' : 'число'));
-    },
+    }
 };
 
 $(document).ready(function () {
@@ -179,7 +178,6 @@ $(document).ready(function () {
         } else if (data.method === 'check_equal') {
             setResult((data.number_one === data.number_two
                 || data.number_one === data.number_three
-                || data.number_two === data.number_one
                 || data.number_two === data.number_three).toString()
                 , 280);
         }
