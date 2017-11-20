@@ -37,7 +37,7 @@ var promptFunctions = {
     },
 
     numDescription: function () {
-        var number = parseInt(prompt('Введите число в диапазоне от -999 до 999'));
+        var number = parseInt(prompt('Введите число в диапазоне от -999 до 999'), 10);
         if (number < -999 || number > 999) {
             alert('Введенное число не соответсвует описанным условиям');
             return;
@@ -55,7 +55,7 @@ var promptFunctions = {
     },
 
     digitDescription: function () {
-        var digit = parseInt(prompt('Введите целое число в диапазоне от 0 до 9'));
+        var digit = parseInt(prompt('Введите целое число в диапазоне от 0 до 9'), 10);
         if (digit < 0 || digit > 9) {
             alert('Введенное число не соответсвует описанным условиям');
             return;
@@ -64,7 +64,7 @@ var promptFunctions = {
     },
 
     markDescription: function () {
-        var mark = parseInt(prompt('Введите целое число в диапазоне от 1 до 5'));
+        var mark = parseInt(prompt('Введите целое число в диапазоне от 1 до 5'), 10);
         if (mark < 1 || mark > 5) {
             alert('Введенное число не соответсвует описанным условиям');
             return;
@@ -76,9 +76,9 @@ var promptFunctions = {
 
     checkEqual: function () {
         var
-            numberOne = parseInt(prompt('Введите первое число: ')),
-            numberTwo = parseInt(prompt('Введите второе число: ')),
-            numberThree = parseInt(prompt('Введите третье число: '));
+            numberOne = parseInt(prompt('Введите первое число: '), 10),
+            numberTwo = parseInt(prompt('Введите второе число: '), 10),
+            numberThree = parseInt(prompt('Введите третье число: '), 10);
 
         alert(numberOne === numberTwo
             || numberOne === numberThree
