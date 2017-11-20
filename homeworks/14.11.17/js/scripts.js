@@ -129,8 +129,7 @@ var promptFunctions = {
 
     fifth: function () {
         var tableBody = '',
-            table = '<table><thead><td></td>',
-            color;
+            table = '<table><thead><td></td>';
         for (var i = 1; i <= 10; i++) {
             table += '<td>' + i + '</td>';
             tableBody +='<tr><td>'+i + '</td>';
@@ -141,8 +140,6 @@ var promptFunctions = {
         }
         table += '</thead>';
         table += tableBody+'</table>';
-        // console.log(table);
-        console.log(table);
         $('#htmlExecute').html(table).show();
     }
 };
