@@ -78,11 +78,12 @@ var promptFunctions = {
 
     },
     fourth: function () {
-        //Bubble sort
+
         var arr = [12, 4, 3, 10, 1, 20],
             temp;
+        //Bubble sort
         for (var i = 0; i < arr.length; i++) {
-            for (var j = 0; j < (arr.length - 1); j++) {
+            for (var j = 0; j < (arr.length - 1 - i); j++) {
                 if (arr[j + 1] < arr[j]) {
                     temp = arr[j + 1];
                     arr[j + 1] = arr[j];
@@ -90,7 +91,29 @@ var promptFunctions = {
                 }
             }
         }
+        i = j = null;
+        console.log('Bubble: ');
         console.log(arr);
+
+        //Shell sort
+        var arrTwo = [12, 4, 3, 10, 1, 20, 7, 11, 23, 5];
+        for (var k = Math.floor(arrTwo.length / 2); k > 0; k =  Math.floor(k/2)) {
+            for (i = k; i < arrTwo.length; i++) {
+                temp = arrTwo[i];
+                for (j = i; j >= k; j -= k) {
+                    if (temp < arrTwo[j - k]) {
+                        arrTwo[j] = arrTwo[j - k];
+                    }
+                    else {
+                        break;
+                    }
+                }
+                arrTwo[j] = temp;
+            }
+        }
+
+        console.log('Shell: ');
+        console.log(arrTwo);
     }
 
 };
