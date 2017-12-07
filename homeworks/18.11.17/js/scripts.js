@@ -12,29 +12,6 @@ var promptFunctions = {
         console.log(_C);
     },
 
-
-// 2.
-// Одномерным массивом задана доска 3 на 3
-// var area = [ null, null, null, null, null, null, null, null, null ]
-//
-// Необходимо сформировать игровое поле состоящее из квадратов для крестиков-ноликов  в HTML.
-//
-//     При появлении в массиве 0-ля рисовать нолик , 1-цы крестик
-//
-// Пример:  [ 1, null, 0, null, 1, null, null, null, null ] на поле 2-а крестика, и 1-н нолик.
-//
-//
-//
-// 3.
-// Задан массив  - [12,4,3,10,1,20]. Удалить из него наименьшее и наибольшее значение.
-//
-//
-//
-//     Bonus.
-// 4. Задача повышенной сложности.
-//     Задан массив - [12,4,3,10,1,20]
-// необходимо отсортировать его в порядке возрастания,
-//     при этом не использовать готовый метод sort и методы разобранные на занятии.
     second: function () {
         var area = [null, null, null, null, null, null, null, null, null],
             numbers = prompt('Введите последовательность 0 и 1(всего 9 штук) для наполнения поля'),
@@ -97,7 +74,7 @@ var promptFunctions = {
 
         //Shell sort
         var arrTwo = [12, 4, 3, 10, 1, 20, 7, 11, 23, 5];
-        for (var k = Math.floor(arrTwo.length / 2); k > 0; k =  Math.floor(k/2)) {
+        for (var k = Math.floor(arrTwo.length / 2); k > 0; k = Math.floor(k / 2)) {
             for (i = k; i < arrTwo.length; i++) {
                 temp = arrTwo[i];
                 for (j = i; j >= k; j -= k) {
