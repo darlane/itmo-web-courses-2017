@@ -30,7 +30,7 @@ var promptFunctions = {
             regFour = /[!$#%]/g;
 
         if (!regOne.test(pass)) {
-            alert('Пароль должен содержать минимум 9 символов');
+            alert('Пароль должен содержать минимум 8 символов');
             return;
         }
         if (!regTwo.test(pass)) {

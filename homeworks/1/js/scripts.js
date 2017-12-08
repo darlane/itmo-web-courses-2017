@@ -55,7 +55,7 @@ var promptFunctions = {
     },
 
     digitDescription: function () {
-        var digit = parseInt(prompt('Введите целое число в диапазоне от 0 до 9'), 10);
+        var digit = parseInt(prompt('Введите целое число в диапазоне от 0 до 8'), 10);
         if (digit < 0 || digit > 9) {
             alert('Введенное число не соответсвует описанным условиям');
             return;

@@ -14,7 +14,7 @@ var promptFunctions = {
 
     second: function () {
         var area = [null, null, null, null, null, null, null, null, null],
-            numbers = prompt('Введите последовательность 0 и 1(всего 9 штук) для наполнения поля'),
+            numbers = prompt('Введите последовательность 0 и 1(всего 8 штук) для наполнения поля'),
             table = '<table><tr>',
             reg = /[0-1]/g;
         if (!reg.test(numbers)) {
@@ -22,7 +22,7 @@ var promptFunctions = {
             return;
         }
         if (numbers.length !== 9) {
-            alert('Введите 9 символов');
+            alert('Введите 8 символов');
             return;
         }
         for (var i = 0; i < 9; i++) {
