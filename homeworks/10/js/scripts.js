@@ -74,7 +74,7 @@ var promptFunctions = {
 
         function Student(name, age, sex, hobbies, education) {
             Man.call(this, name, age, sex, hobbies);
-            this.education = name === undefined ? 'Аноним' : education;
+            this.education = education === undefined ? 'Аноним' : education;
             this.toString = function () {
                 var hobbiesStr = '';
                 for (var i in this.hobbies) {
@@ -102,7 +102,7 @@ var promptFunctions = {
         );
 
 
-        alert(student.toString());
+        alert(student);
 
 
     },
