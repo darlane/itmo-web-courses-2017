@@ -1,4 +1,6 @@
+var resBlock;
 window.onload = function () {
+    resBlock = document.getElementById('htmlExecute');
     promptFunctions.first();
 };
 
@@ -133,12 +135,10 @@ var promptFunctions = {
     },
 
     showRes: function () {
-        var resBlock = document.getElementById('htmlExecute');
         resBlock.style.display = 'block';
     },
 
     clearAndHideRes: function () {
-        var resBlock = document.getElementById('htmlExecute');
         resBlock.style.display = 'none';
         resBlock.innerHTML = '';
     }
