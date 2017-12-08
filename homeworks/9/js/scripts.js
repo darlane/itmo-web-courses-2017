@@ -93,6 +93,7 @@ var promptFunctions = {
         firstDiv.renderNew();
         firstDiv.renderNew();
         this.showRes();
+        this.hideKeyBoard();
 
 
     },
@@ -109,6 +110,7 @@ var promptFunctions = {
         button.innerText = count;
         resBlock.appendChild(button);
         this.showRes();
+        this.hideKeyBoard();
 
         function increaseCounter() {
             count++;
@@ -120,11 +122,19 @@ var promptFunctions = {
     third: function () {
         this.clearAndHideRes();
 
-        this.showRes();
+        this.showKeyBoard();
     },
 
     showRes: function () {
         resBlock.style.display = 'block';
+    },
+
+    showKeyBoard: function () {
+        document.getElementById('container').style.display = 'block';
+    },
+
+    hideKeyBoard: function () {
+        document.getElementById('container').style.display = 'none';
     },
 
     clearAndHideRes: function () {

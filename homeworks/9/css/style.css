@@ -1,7 +1,9 @@
 div {
     display: block;
 }
-
+#container{
+    display: none;
+}
 .button-block {
     margin: 20px auto;
     width: max-content;
