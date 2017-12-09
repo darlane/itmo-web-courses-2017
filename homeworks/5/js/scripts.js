@@ -78,6 +78,12 @@ var promptFunctions = {
     },
     fibonacci: function (count) {
         var res = [1, 1];
+        if (count === 1) {
+            res = [1];
+        }
+        if (count < 1) {
+            res = [];
+        }
         for (var i = 2; i < count; i++) {
             // console.log(res[i])
             res.push(res[i - 1] + res[i - 2]);
