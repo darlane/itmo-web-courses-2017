@@ -47,7 +47,7 @@ class FirstTask
 
     public static function debugValue($key, $value)
     {
-        var_dump($key.':  ');
+        echo$key.':  ';
         var_dump($value);
         echo '<br>';
     }
