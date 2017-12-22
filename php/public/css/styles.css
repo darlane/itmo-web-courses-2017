@@ -1,0 +1,54 @@
+body * {
+    display: inline-block;
+}
+
+#myCalendar {
+    height: 200px;
+}
+
+.current-date {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    float: left;
+}
+
+.current-day {
+    font-size: 120px;
+}
+
+.current-month {
+    font-size: 40px;
+}
+
+.current-event {
+    float: left;
+    width: 800px;
+    margin: 20px 50px;
+    padding: 20px;
+    border: 2px solid green;
+    border-radius: 20px;
+}
+
+.current-event-title {
+    font-size: 25px;
+}
+
+.current-event-img {
+    margin: 20px 0;
+}
+
+.current-event-img img {
+    max-width: 800px;
+}
+
+.current-event-desc {
+    color: #999;
+}
+
+.admin-form {
+    width: 400px;
+    margin: 20px;
+}

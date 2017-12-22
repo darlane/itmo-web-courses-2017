@@ -1,2 +1,3 @@
 # PHP
-Homework and lessons tasks at PHP module 
+Лабораторные задания по курсу php.
+Добавил МРП роутинга для упрощения разработки
