@@ -12,9 +12,28 @@ namespace Controllers;
 class AdminCalendarController
 {
 
-    public function index()
+    public function index($input)
     {
-        return view('calendar/admin');
+        if (isset($_SESSION['auth']) && $_SESSION['auth'] === true) {
+            unset($_SESSION['error_auth']);
+            return view('calendar/admin/index');
+        }
+        return view('calendar/admin/auth', [
+            'errorAuth' => isset($_SESSION['error_auth']) && $_SESSION['error_auth'] ===  true
+        ]);
+    }
+
+    public function auth($input)
+    {
+        $accounts = json_decode(file_get_contents(APP_PATH.'/public/files/passwd'));
+        foreach ($accounts as $account) {
+            if ($account->login === $input['login'] && $account->pass === md5($input['password'])) {
+                $_SESSION['auth'] = true;
+                return redirect('/calendar/admin');
+            }
+        }
+        $_SESSION['error_auth'] = true;
+        return redirect('/calendar/admin');
     }
 
     public function addEvent($input)

@@ -6,9 +6,13 @@ function view($tplName, $attributes = [])
     include_once APP_PATH.'/views/'.$tplName.'.php';
 }
 
-function redirect($url)
+function redirect($url, $code = null)
 {
-    header("Location: $url");
+    if ($code !== null) {
+        header("Location: $url", true, $code);
+    } else {
+        header("Location: $url");
+    }
 }
 
 

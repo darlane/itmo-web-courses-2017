@@ -1,7 +1,7 @@
 <?php
 define('APP_PATH', realpath(dirname(__FILE__).'/..'));
 registerClasses(APP_PATH, true);
-
+session_start();
 function registerClasses($directory, $first = false)
 {
     $dirs = array_filter(glob($directory.'/*'), 'is_dir');
@@ -25,6 +25,7 @@ $url = $_SERVER['REQUEST_URI'];
 if (substr($url, -1, 1) === '/' && substr($url, -2, 1) !== '\\') {
     $url = substr($url, 0, -1);
 }
+$url = explode('?', $_SERVER['REQUEST_URI'], 2)[0];
 if (($route = \Framework\Router::checkRouteExist($url)) !== null) {
     list($controller, $action) = explode('@', $route);
     $controllerClass = new $controller();
